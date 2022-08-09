@@ -1,6 +1,6 @@
 body{
     background: #F3F5FC;
-
+    font-family: sans-serif;
 }
 
 header{
@@ -95,6 +95,7 @@ header #top{
     border-radius: 10px;
     height: 6.5vh;
     cursor: pointer;
+    font-size: 24px;
 }
 
 #b_encriptar span{
@@ -107,6 +108,7 @@ header #top{
     border-radius: 10px;
     height: 6.5vh;
     cursor: pointer;
+    font-size: 24px;
 }
 
 #b_desencriptar span{
@@ -118,7 +120,7 @@ header #top{
     display: flex;
     flex-direction: column;
     gap: 3vh;
-    margin-top: 8vh;
+    margin-top: 5vh;
     align-items: center;
 }
 
