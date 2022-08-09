@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background: #F3F5FC;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin: auto;
+    width: 960px;
+    height: 650px;
+    padding: 5px;
+    display: grid;
+    grid-template-areas:
+        "logo logo logo logo"
+        "input input input display"
+        "input input input display"
+        "button button button copy";
+}
+
+.logo {
+    width: 100%;
+    background-color: yellow;
+    display: grid;
+    grid-area: logo;
+}
+
+.logoimg {
+    margin-top: 1%;
+    float: inherit;
+    margin-left: 5%;
+}
+
+.tittle {
+    float: inherit;
+    margin-left: 25%;
+}
+
+.left {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    background-color: red;
+    display: grid;
+    grid-area: input;
+}
+
+.left-button {
+    float: left;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    background-color: pink;
+    display: grid;
+    grid-area: button;
+}
+
+.text-input {
+    margin-left: 10%;
+    margin-top: 10%;
+    width: 80%;
+    height: 80%;
+    color: #0A3871;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: #F3F5FC;
+}
+
+#muneco {
+    margin-left: 2%;
+    margin-top: 20%;
+    width: 45%;
+    height: auto;
+}
+
+h2 {
+    margin-left: 7%;
+    margin-right: 5%;
+}
+
+textarea {
+    margin-left: 10%;
+    color: #0A3871;
+    width: 80%;
+    height: 60%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+#btn-encriptar {
+    padding: 24px;
+    width: 30%;
+    height: 60%;
+    border-radius: 24px;
+    margin-left: 15%;
+    background-color: #0A3871;
+}
+
+#btn-desencriptar {
+    padding: 24px;
+    width: 30%;
+    height: 60%;
+    border-radius: 24px;
+    margin-left: 6%;
+    background-color: #D8DFE8;
+}
+
+.right {
+    width: 100%;
+    height: auto;
+    background: orange;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    display: grid;
+    grid-area: display;
+}
+
+#copiar {
+    box-sizing: border-box;
+    padding: 24px;
+    gap: 8px;
+    width: 328px;
+    height: 67px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+}
