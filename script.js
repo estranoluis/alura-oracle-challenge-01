@@ -1,43 +1,37 @@
-// e --> enter
-// o --> ober
-// i --> imes
-// a --> ai
-// u --> ufat
-
-function encriptar() {
-    var texto = document.getElementById("inputText").value.toLowerCase();
-    var txtCifrado = texto.replace(/e/igm,"enter");
-    var txtCifrado = txtCifrado.replace(/o/igm,"ober");
-    var txtCifrado = txtCifrado.replace(/i/igm,"imes");
-    var txtCifrado = txtCifrado.replace(/a/igm,"ai");
-    var txtCifrado = txtCifrado.replace(/u/igm,"ufat");
-
-    document.getElementById("muneco").style.display = "none";
-    document.getElementById("frame5").style.display = "none";
-    document.getElementById("rectangle1").innerHTML = txtCifrado;
-    document.getElementById("Copy").style.display = "show";
-    document.getElementById("Copy").style.display = "inherit";
+function encriptar(){
+    var mensaje = document.getElementById("input").value;
+    var texto = mensaje.replace(/i/igm, "imes");
+    var texto = texto.replace(/a/igm, "ai");
+    var texto = texto.replace(/e/igm, "enter");
+    var texto = texto.replace(/o/igm, "ober");
+    var texto = texto.replace(/u/igm, "ufat");
+    document.getElementById("resultado").innerHTML = texto;
+    document.querySelector('.area-resultado > img').style.display = "none";
+    document.getElementById("input").value = "";
+    document.querySelector('.caja-textos').style.display="none";
+    document.getElementById("resultado").style.display = "block";
+    document.getElementById("copiar").style.display = "inherit";
 }
 
-function desencriptar() {
-    var texto = document.getElementById("inputText").value.toLowerCase();
-    var txtCifrado = texto.replace(/enter/igm,"e");
-    var txtCifrado = txtCifrado.replace(/ober/igm,"o");
-    var txtCifrado = txtCifrado.replace(/imes/igm,"i");
-    var txtCifrado = txtCifrado.replace(/ai/igm,"a");
-    var txtCifrado = txtCifrado.replace(/ufat/igm,"u");
-
-    document.getElementById("muneco").style.display = "none";
-    document.getElementById("frame5").style.display = "none";
-    document.getElementById("rectangle1").innerHTML = txtCifrado;
-    document.getElementById("Copy").style.display = "show";
-    document.getElementById("Copy").style.display = "inherit";
+function desencriptar(){
+    var mensaje = document.getElementById("input").value;
+    var texto = mensaje.replace(/imes/igm, "i");
+    var texto = texto.replace(/ai/igm, "a");
+    var texto = texto.replace(/enter/igm, "e");
+    var texto = texto.replace(/ober/igm, "o");
+    var texto = texto.replace(/ufat/igm, "u");
+    document.getElementById("resultado").innerHTML = texto;
+    document.querySelector('.area-resultado > img').style.display = "none";
+    document.getElementById("input").value = "";
+    document.querySelector('.caja-textos').style.display="none";
+    document.getElementById("resultado").style.display = "block";
+    document.getElementById("copiar").style.display = "inherit";
 }
 
-function copy() {
-    var contenido = document.getElementById("rectangle1");
-    contenido.select();
-    document.execCommand("copy");
-    alert("¡Se copió!");
+function copiar(){
+    var texto = document.getElementById("resultado");
+    texto.select();
+    navigator.clipboard.writeText(texto.value);
 }
+
 
